@@ -1,0 +1,184 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.p-main__style {
+    width: 100%;
+    &-sub {
+        padding: 0 30px;
+        margin: 0 auto;
+        text-align: center;
+        @include mixin.pc {
+            max-width: 1220px;
+        }
+        .p-main__style-title {
+            margin: 60px 0 65px 0;
+            position: relative;
+            @include mixin.pc {
+                margin: 80px 0 65px 0;
+            }
+        }
+        .p-main__style-title::before {
+            content: "";
+            background-image: url(/images/style-border.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            height: 35px;
+            top: 18px;
+            width: 208px;
+            margin-left: -86px;
+            @include mixin.pc {
+                width: 270px;
+                top: 33px;
+            }
+        }
+        .p-main__style-title::after {
+            content: "";
+            background-image: url(/images/くし.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 85px;
+            height: 100px;
+            top: -68px;
+            margin-left: 10px;
+            @include mixin.pc {
+                top: -58px;
+            }
+        }
+        .p-main__style-img-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+            @include mixin.pc {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 165px;
+                margin: 0 auto;
+                @include mixin.pc {
+                    width: 305px;
+                    height: 305px;
+                    margin: inherit;
+                }
+            }
+            .p-main__style-view-more-box {
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(225.05deg, rgba(228, 210, 188, 0.41) -0.74%, rgba(228, 209, 186, 0.437656) -0.73%, #D5BDA0 100.66%);
+                @include mixin.pc {
+                    width: inherit;
+                    margin: inherit;
+                }
+                .p-main__style-view-more-btn {
+                    width: 90%;
+                    border: 1px solid #000000;
+                    border-radius: 2px;
+                    font-family: "Lato";
+                    letter-spacing: 0.095em;
+                    color: #000000;
+                    position: relative;
+                    height: 38px;
+                    line-height: 38px;
+                    text-align: left;
+                    padding-left: 10px;
+                    font-size: 12px;
+                    @include mixin.pc {
+                        padding: 18px 108px 18px 33px;
+                        width: inherit;
+                        height: inherit;
+                        text-align: inherit;
+                        line-height: inherit;
+                        padding-left: inherit;
+                        font-size: inherit;
+                    }
+                }
+                .p-main__style-view-more-btn::after {
+                    content: "";
+                    position: absolute;
+                    top: 18px;
+                    width: 28px;
+                    height: 4px;
+                    margin-left: 10px;
+                    border-bottom: 1px solid #000000;
+                    border-right: 1px solid #000000;
+                    transform: skew(58deg);
+                    @include mixin.pc {
+                        top: 22px;
+                        width: 44px;
+                        height: 7px;
+                        margin-left: 30px;
+                    }
+                }
+            }
+            .p-main__style-instagram-box {
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(225deg, rgba(255, 253, 241, 0.9) 0%, #F2EDCE 100%);
+                @include mixin.pc {
+                    width: inherit;
+                    margin: inherit;
+                }
+                .p-main__style-instagram-btn {
+                    width: 90%;
+                    height: 38px;
+                    font-family: "Lato";
+                    color: #000000;
+                    letter-spacing: 0.095em;
+                    border: 1px solid #000000;
+                    border-radius: 2px;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    font-size: 12px;
+                    @include mixin.pc {
+                        padding: 14px 91px 14px 17px;
+                        width: inherit;
+                        height: inherit;
+                        line-height: inherit;
+                        font-size: inherit;
+                    }
+                    .fa-instagram {
+                        content: "\f16d";
+                        font-family: "Font Awesome 5 Brands";
+                        font-weight: 400;
+                        position: relative;
+                        color: #000000;
+                        font-size: 16px;
+                        margin-left: 10px;
+                        margin-right: 5px;
+                        top: -1px;
+                        @include mixin.pc {
+                            font-size: 24px;
+                            margin-right: 10px;
+                            margin-left: inherit;
+                        }
+                    }
+                }
+                .p-main__style-instagram-btn::after {
+                    content: "";
+                    position: absolute;
+                    top: 14px;
+                    width: 28px;
+                    height: 7px;
+                    border-bottom: 1px solid #000000;
+                    border-right: 1px solid #000000;
+                    transform: skew(58deg);
+                    margin-left: 107px;
+                    @include mixin.pc {
+                        width: 44px;
+                        top: 22px;
+                        margin-left: 163px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,199 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.p-main__menu {
+    width: 100%;
+    background-color: #F9F7EC;
+    margin-top: 60px;
+    @include mixin.pc {
+        margin-top: 108px;
+    }
+    &-sub {
+        padding: 0 30px;
+        margin: 0 auto;
+        text-align: center;
+        @include mixin.pc {
+            max-width: 1220px;
+        }
+        .p-main__menu-title {
+            padding: 50px 0 60px 0;
+            position: relative;
+            @include mixin.pc {
+                padding: 80px 0 60px 0;
+            }
+        }
+        .p-main__menu-title::before {
+            content: "";
+            background-image: url(/images/menu-border.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            height: 35px;
+            top: 74px;
+            width: 230px;
+            margin-left: -84px;
+            @include mixin.pc {
+                width: 270px;
+                top: 110px;
+            }
+        }
+        .p-main__menu-title::after {
+            content: "";
+            background-image: url(/images/ハサミ.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 85px;
+            height: 65px;
+            top: 25px;
+            @include mixin.pc {
+                top: 60px;
+            }
+        }
+        .p-main__menu-img-box {
+            @include mixin.pc {
+                display: flex;
+            }
+            .p-main__menu-img-block1, .p-main__menu-img-block3 {
+                @include mixin.pc {
+                    margin-right: 83px;
+                }
+            }
+            .p-main__menu-img-block2 {
+                display: flex;
+                justify-content: right;
+                @include mixin.pc {
+                    display: inherit;
+                    margin-top: 120px;
+                }
+            }
+            .p-main__menu-img-block3 {
+                @include mixin.pc {
+                    margin-top: 35px;
+                }
+            }
+            .p-main__menu-img-block4 {
+                display: flex;
+                justify-content: right;
+                @include mixin.pc {
+                    display: inherit;
+                    margin-top: 140px;
+                }
+            }
+            .p-main__menu-img-block {
+                margin-bottom: 90px;
+                position: relative;
+                @include mixin.pc {
+                    margin-bottom: inherit;
+                }
+                .p-main__menu-img {
+                    width: 75%;
+                    height: 156px;
+                    object-fit: cover;
+                    @include mixin.pc {
+                        width: inherit;
+                        height: inherit;
+                        object-fit: inherit;
+                    }
+                }
+                .p-main__menu-img-1, .p-main__menu-img-3 {
+                    display: flex;
+                    @include mixin.pc {
+                        display: inherit;
+                    }
+                }
+                .p-main__menu-img-1, .p-main__menu-img-3 {
+                    display: flex;
+                    justify-content: right;
+                    @include mixin.pc {
+                        display: inherit;
+                    }
+                }
+                .p-main__menu-img-1 {
+                    @include mixin.pc {    
+                        margin-top: 40px;
+                    }
+                }
+                .p-main__menu-sub-box2, .p-main__menu-sub-box4 {
+                    left: 0;
+                    @include mixin.pc {
+                        left: 382px;
+                    }
+                }
+                .p-main__menu-sub-box {
+                    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
+                    background-color: #FCFCFC;
+                    text-align: left;
+                    width: 45%;
+                    position: absolute;
+                    top: 20px;
+                    @include mixin.pc {
+                        top: 137px;
+                        left: 382px;
+                        width: 207px;
+                        height: 228px;
+                    }
+                    .p-main__menu-sub-title {
+                        padding: 20px 25px 20px;
+                        font-style: normal;
+                        font-weight: normal;
+                        letter-spacing: 0.1em;
+                        white-space: nowrap;
+                        line-height: 28px;
+                        font-size: 14px;
+                        @include mixin.pc {
+                            padding: 36px 25px 20px;
+                            font-size: inherit;
+                        }
+                    }
+                    .p-main__menu-text {
+                        padding: 0 25px 20px;
+                        letter-spacing: 0.1em;
+                        font-size: 12px;
+                        line-height: 18px;
+                        @include mixin.pc {
+                            line-height: 28px;
+                            font-size: 15px;
+                            padding: 0 25px 36px;
+                        }
+                    }
+                }
+                .p-main__menu-sub-box1, .p-main__menu-sub-box3 {
+                    right: 0;
+                    @include mixin.pc {
+                        right: inherit;
+                    }
+                }
+            }
+        }
+        .p-main__menu-view-more {
+            display: inline-block;
+            color: #000000;
+            border-radius: 2px;
+            border: 1px solid #000000;
+            letter-spacing: 0.095em;
+            padding: 18px 80px 18px 25px;
+            margin: 10px 0 70px 0;
+            font-family: "Lato";
+            font-style: normal;
+            position: relative;
+            font-size: 14px;
+            white-space: nowrap;
+            width: 80%;
+            @include mixin.pc {
+                font-size: inherit;
+                width: inherit;
+                padding: 18px 167px 18px 92px;
+                margin: 110px 0 100px 0;
+            }
+        }
+        .p-main__menu-view-more::after {
+            content: "";
+            position: absolute;
+            top: 22px;
+            width: 44px;
+            height: 7px;
+            border-bottom: 1px solid #000000;
+            border-right: 1px solid #000000;
+            transform: skew(58deg);
+            margin-left: 30px;
+        }
+    }
+}

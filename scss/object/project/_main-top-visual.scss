@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.p-main {
+    width: 100%;
+    height: 400px;
+    padding-left: 30px;
+    @include mixin.pc {
+        height: 693px;
+        padding-left: inherit;
+    }
+    &__top-visual-bg-img {
+        background-image: url("/images/ファーストビュー写真.png");
+        background-size: cover;
+        height: 263px;
+        width: 100%;
+        float: right;
+        position: relative;
+        z-index: 10;
+        @include mixin.pc {
+            height: 619px;
+            width: 85%;
+        }
+        .fab {
+            font-family: "Font Awesome 5 Brands";
+        }
+        .fa-instagram {
+            content: "\f16d";
+            font-weight: 400;
+            color: #FEFEFE;
+            font-size: 25px;
+            background-color: #D5BDA0;
+            height: 52px;
+            width: 52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: fixed;
+            top: 320px;
+            right: 0;
+            margin-right: 20px;
+            @include mixin.pc {
+                top: 461px;
+                left: 1077px;
+                margin-right: inherit;
+                position: absolute;
+            }
+        }
+        .fa-twitter {
+            content: "\f099";
+            font-weight: 400;
+            color: #FEFEFE;
+            font-size: 25px;
+            background-color: #D5BDA0;
+            height: 52px;
+            width: 52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: fixed;
+            top: 390px;
+            right: 0;
+            margin-right: 20px;
+            @include mixin.pc {
+                top: 532px;
+                left: 1077px;
+                margin-right: inherit;
+                position: absolute;
+            }
+        }
+    }
+    &__top-visual-title {
+        position: relative;
+        white-space: nowrap;
+        top: 290px;
+        left: 0;
+        margin-left: 8px;
+        width: 20%;
+        z-index: 20;
+        font-family: "Roboto";
+        font-size: 21px;
+        line-height: 1.7;
+        font-weight: bold;
+        letter-spacing: 0.46em;
+        color: #735D42;
+        @include mixin.pc {
+            left: 107px;
+            letter-spacing: 0.205em;
+            line-height: 57px;
+            font-size: 32px;
+            font-weight: 500;
+            margin-left: inherit;
+        }
+    }
+    &__top-visual {
+        width: 100%;
+        margin: 0 auto;
+        height: 100%;
+        @include mixin.pc {
+            max-width: 1220px;
+        }
+        &-bg-color {
+            background-color: #F9F7EC;
+            height: 400px;
+            width: calc(100% - 30px);
+            position: absolute;
+            top: 50px;
+            left: 0;
+            z-index: 0;
+            @include mixin.pc {
+                height: 693px;
+                width: 43%;
+                top: 69px;
+            }
+        }
+    }
+}

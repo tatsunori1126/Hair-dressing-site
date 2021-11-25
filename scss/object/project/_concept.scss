@@ -1,0 +1,165 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.p-main__concept {
+    width: 100%;
+    &-sub {
+        padding: 0 30px;
+        text-align: center;
+        position: relative;
+        @include mixin.pc {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: inherit;
+        }
+        .p-main__concept-title {
+            margin: 80px 0 50px 0;
+            position: relative;
+            @include mixin.pc {
+                margin: 80px 0 60px 0;
+            }
+        }
+        .p-main__concept-title::before {
+            content: "";
+            background-image: url(/images/concept-border.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 220px;
+            height: 35px;
+            top: 20px;
+            margin-left: -58px;
+            @include mixin.pc {
+                top: 30px;
+                width: 270px;
+            }
+        }
+        .p-main__concept-title::after {
+            content: "";
+            background-image: url(/images/1587505\ 2.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 85px;
+            height: 100px;
+            top: -58px;
+            @include mixin.pc {
+                top: -44px;
+            }
+        }
+        .p-main__concept-box {
+            @include mixin.pc {
+                display: flex;
+            }
+            .p-main__concept-img {
+                width: 100%;
+                height: 275px;
+                padding-top: 83px;
+                object-fit: cover;
+                @include mixin.pc {
+                    display: flex;
+                    justify-content: left;
+                    width: inherit;
+                    height: inherit;
+                    padding-top: inherit;
+                    object-fit: inherit;
+                }
+            }
+            .p-main__concept-sub-title {
+                text-align: left;
+                letter-spacing: 0.41em;
+                font-size: 17px;
+                font-family: "Roboto";
+                line-height: 2.1em;
+                position: relative;
+                display: inline-block;
+                bottom: 282px;
+                @include mixin.pc {
+                    font-size: 20px;
+                    text-align: inherit;
+                    margin: 60px 0 0 40px;
+                    line-height: 44px;
+                    position: inherit;
+                    display: inherit;
+                    bottom: inherit;
+                }
+            }
+        }
+        .p-main__concept-text-back {
+            width: 100%;
+            background-color: #D5BDA0;
+            position: relative;
+            margin-top: -36px;
+            padding-bottom: 12px;
+            @include mixin.pc {
+                position: absolute;
+                width: 578px;
+                height: 314px;
+                top: 310px;
+                left: 630px;
+                margin-top: inherit;
+                margin-bottom: inherit;
+            }
+            .p-main__concept-text-back-sub {
+                width: 100%;
+                height: 100%;
+                background-color: #FCFCFC;
+                margin-left: 12px;
+                @include mixin.pc {
+                    position: relative;
+                    bottom: 12px;
+                }
+                .p-main__concept-text {
+                    background-color: #FCFCFC;
+                    text-align: left;
+                    line-height: 28px;
+                    width: 100%;
+                    position: relative;
+                    // margin: -12px 0 0 12px;
+                    padding: 50px 30px 20px;
+                    font-size: 12px;
+                    top: -12px;
+                    @include mixin.pc {
+                        width: 578px;
+                        height: 314px;
+                        padding: 63px 85px 42px 103px;
+                        position: relative;
+                        font-size: inherit;
+                        top: 0;
+                    }
+                }
+                .p-main__concept-view-more {
+                    // position: absolute;
+                    display: inline-block;
+                    color: #000000;
+                    border-radius: 2px;
+                    border: 1px solid #000000;
+                    letter-spacing: 0.095em;
+                    padding: 18px 80px 18px 52px;
+                    font-family: "Lato";
+                    font-style: normal;
+                    font-size: 14px;
+                    white-space: nowrap;
+                    width: 80%;
+                    margin-bottom: 50px;
+                    text-align: left;
+                    // top: 250px;
+                    // left: 0;
+                    // margin-left: 40px;
+                    @include mixin.pc {
+                        display: none;
+                    }
+                }
+                .p-main__concept-view-more::after {
+                    content: "";
+                    position: absolute;
+                    // top: 22px;
+                    width: 35px;
+                    height: 4px;
+                    border-bottom: 1px solid #000000;
+                    border-right: 1px solid #000000;
+                    transform: skew(58deg);
+                    margin-left: 30px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

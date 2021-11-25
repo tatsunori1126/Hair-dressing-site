@@ -1,0 +1,191 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.p-main__staff {
+    width: 100%;
+    background-color: #F9F7EC;
+    position: relative;
+    height: 1700px;
+    margin-top: 56px;
+    @include mixin.pc {
+        margin-top: 80px;
+        height: 734px;
+    }
+    .p-main__staff-border {
+        content: "";
+        width: calc(100% - 30px);
+        background: rgba(217,195,168,0.47);
+        position: absolute;
+        top: 900px;
+        left: 0;
+        z-index: 10;
+        height: 194px;
+        @include mixin.pc {
+            display: none;
+        }
+    }
+    .p-main__staff-border::after {
+        content: "";
+        width: 100%;
+        background: rgba(217,195,168,0.47);
+        position: absolute;
+        top: 543px;
+        left: 0;
+        z-index: 10;
+        height: 194px;
+        @include mixin.pc {
+            display: none;
+        }
+    }
+    &-sub {
+        padding: 0 30px;
+        margin: 0 auto;
+        text-align: center;
+        @include mixin.pc {
+            max-width: 1220px;
+        }
+        .p-main__staff-title {
+            padding: 80px 0 60px;
+            position: relative;
+        }
+        .p-main__staff-title::before {
+            content: "";
+            background-image: url(/images/staff-border.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            height: 35px;
+            top: 98px;
+            width: 224px;
+            margin-left: -87px;
+            @include mixin.pc {
+                width: 270px;
+                top: 110px;
+            }
+        }
+        .p-main__staff-title::after {
+            content: "";
+            background-image: url(/images/スタッフ.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 85px;
+            height: 70px;
+            top: 53px;
+            margin-left: 7px;
+        }
+        .p-main__staff-img-box {
+            position: relative;
+            z-index: 20;
+            @include mixin.pc {
+                display: flex;
+                justify-content: center;
+            }
+            .p-main__staff-img-block {
+                width: 85%;
+                margin: 0 auto;
+                @include mixin.pc {
+                    width: 266px;
+                    margin: inherit;
+                }
+                .p-main__staff-img {
+                    position: relative;
+                    z-index: 50;
+                    width: 100%;
+                    height: 304px;
+                    object-fit: cover;
+                    @include mixin.pc {
+                        position: inherit;
+                    }
+                }
+                .p-main__staff-name {
+                    font-size: 14px;
+                    text-align: center;
+                    font-weight: normal;
+                    font-style: normal;
+                    letter-spacing: 0.1em;
+                    margin: 15px 0;
+                    position: relative;
+                    z-index: 50;
+                    @include mixin.pc {
+                        text-align: left;
+                        font-size: inherit;
+                    }
+                }
+                .p-main__staff-text {
+                    font-size: 13px;
+                    text-align: left;
+                    letter-spacing: 0.1em;
+                    line-height: 21px;
+                    position: relative;
+                    z-index: 50;
+                    @include mixin.pc {
+                        line-height: 28px;
+                        font-size: inherit;
+                        position: inherit;
+                    }
+                }
+            }
+            .p-main__staff-img-block-center {
+                padding-top: 130px;
+                width: 85%;
+                margin: 0 auto;
+                position: relative;
+                z-index: 1;
+                @include mixin.pc {
+                    width: 266px;
+                    margin: 0 143px;
+                    padding-top: inherit;
+                    position: inherit;
+                }
+            }
+            // .p-main__staff-img-block-center::after {
+            //     content: "";
+            //     width: calc(100% + 30px);
+            //     background: rgba(217,195,168,0.47);
+            //     position: absolute;
+            //     top: 354px;
+            //     left: -30px;
+            //     z-index: 10;
+            //     height: 194px;
+            //     @include mixin.pc {
+            //         display: none;
+            //     }
+            // }
+            .p-main__staff-img-block-right {
+                margin: 110px auto 50px;
+                position: relative;
+                width: 85%;
+                @include mixin.pc {
+                    margin: inherit;
+                    width: 266px;
+                }
+            }
+            // .p-main__staff-img-block-right::after {
+            //     content: "";
+            //     width: calc(100% + 30px);
+            //     background: rgba(217,195,168,0.47);
+            //     position: absolute;
+            //     top: 245px;
+            //     left: -30px;
+            //     z-index: 10;
+            //     height: 194px;
+            //     @include mixin.pc {
+            //         display: none;
+            //     }
+            // }
+        }
+    }
+}
+.p-main__staff::after {
+    content: "";
+    width: calc(100% - 30px);
+    background: rgba(217, 195, 168, 0.47);
+    position: absolute;
+    top: 410px;
+    left: 0;
+    z-index: 10;
+    height: 194px;
+    @include mixin.pc {
+        width: calc(((100% - 1220px) / 2) + 1220px);
+        height: 268px;
+        top: 380px;
+    }
+}

@@ -1,0 +1,8 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.section-title {
+    font-size: 20px;
+    @include mixin.pc {
+        font-size: 30px;
+    }
+}

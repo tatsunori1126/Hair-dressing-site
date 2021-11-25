@@ -1,0 +1,193 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.p-footer {
+    width: 100%;
+    height: 100%;
+    background-color: #F9F7EC;
+    @include mixin.pc {
+        height: 393px;
+        padding: 80px 0 0 0;
+    }
+    &__sub {
+        padding: 70px 30px;
+        margin: 0 auto;
+        text-align: center;
+        @include mixin.pc {
+            padding: 0 30px;
+            max-width: 1220px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .p-footer__nav {
+            text-align: left;
+            &-box {
+                .p-footer__nav-list {
+                    margin-bottom: 32px;
+                    @include mixin.pc {
+                        margin-bottom: 42px;
+                    }
+                    a {
+                        color: #000000;
+                        font-family: "Lato";
+                        font-weight: 300;
+                        letter-spacing: 0.095em;
+                        font-size: 15px;
+                        @include mixin.pc {
+                            font-size: inherit;
+                        }
+                    }
+                }
+                .p-footer__nav-list-right1 {
+                    margin-right: 116px;
+                }
+                .p-footer__nav-list-right2 {
+                    margin-right: 86px;
+                }
+            }
+            &-box-flex {
+                display: flex;
+            }
+        }
+        .p-footer__access {
+            text-align: left;
+            @include mixin.pc {
+                text-align: inherit;
+            }
+            .p-footer__open-box {
+                .p-footer__open-title {
+                    margin-bottom: 8px;
+                    font-family: "Lato";
+                    font-style: normal;
+                    font-weight: bold;
+                    letter-spacing: 0.095em;
+                    font-size: 15px;
+                    @include mixin.pc {
+                        font-size: 18px;
+                        margin-bottom: 20px;
+                    }
+                }
+                .p-footer__open-text {
+                    margin-bottom: 55px;
+                    line-height: 24px;
+                    letter-spacing: 0.095em;
+                    font-size: 15px;
+                    @include mixin.pc {
+                        font-size: inherit;
+                    }
+                }
+            }
+            .p-footer__access-box {
+                .p-footer__access-title {
+                    margin-bottom: 8px;
+                    font-family: "Lato";
+                    font-style: normal;
+                    font-weight: bold;
+                    letter-spacing: 0.095em;
+                    font-size: 15px;
+                    @include mixin.pc {
+                        font-size: 18px;
+                        margin-bottom: 20px;
+                    }
+                }
+                .p-footer__access-text {
+                    line-height: 24px;
+                    letter-spacing: 0.095em;
+                    text-align: left;
+                    font-size: 15px;
+                    @include mixin.pc {
+                        padding-left: 94px;
+                        font-size: inherit;
+                    }
+                }
+            }
+        }
+        .p-footer__reserve {
+            &-title {
+                font-family: "Lato";
+                font-style: normal;
+                font-weight: bold;
+                letter-spacing: 0.095em;
+                text-align: left;
+                margin-top: 60px;
+                font-size: 15px;
+                @include mixin.pc {
+                    font-size: 18px;
+                    text-align: inherit;
+                    margin-top: inherit;
+                }
+            }
+            &-tell-box {
+                .p-footer__reserve-tell-number {
+                    text-align: left;
+                    display: inline-block;
+                    color: #000000;
+                    font-weight: bold;
+                    letter-spacing: 0.095em;
+                    border: 1px solid #000000;
+                    border-radius: 2px;
+                    height: 54px;
+                    line-height: 54px;
+                    width: 100%;
+                    margin: 20px 0 15px;
+                    font-size: 14px;
+                    @include mixin.pc {
+                        width: 362px;
+                        font-size: inherit;
+                    }
+                    .fa-phone-alt {
+                        content: "\f879";
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        color: #000000;
+                        font-size: 16px;
+                        margin: 0 23px 0 50px;
+                        @include mixin.pc {
+                            margin: 0 23px 0 76px;
+                        }
+                    }
+                }
+            }
+            &-mail-box {
+                .p-footer__reserve-mail-text {
+                    text-align: left;
+                    display: inline-block;
+                    color: #000000;
+                    font-weight: bold;
+                    letter-spacing: 0.095em;
+                    border: 1px solid #000000;
+                    border-radius: 2px;
+                    height: 54px;
+                    line-height: 54px;
+                    width: 100%;
+                    font-size: 14px;
+                    @include mixin.pc {
+                        width: 362px;
+                        font-size: inherit;
+                    }
+                    .fa-envelope {
+                        content: "\f0e0";
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        color: #000000;
+                        font-size: 16px;
+                        margin: 0 23px 0 50px;
+                        @include mixin.pc {
+                            margin: 0 23px 0 76px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.p-footer-bar {
+    width: 100%;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-copyright {
+        font-size: 10px;
+        letter-spacing: 0.03em;
+    }
+}

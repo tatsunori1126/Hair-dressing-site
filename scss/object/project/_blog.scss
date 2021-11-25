@@ -1,0 +1,119 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.p-main__blog {
+    width: 100%;
+    &-sub {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 30px;
+        @include mixin.pc {
+            max-width: 1220px;
+        }
+        .p-main__blog-title {
+            padding: 60px 0 77px;
+            position: relative;
+            @include mixin.pc {
+                padding: 80px 0 77px;
+            }
+        }
+        .p-main__blog-title::before {
+            content: "";
+            background-image: url(/images/blog-border.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 270px;
+            height: 35px;
+            top: 82px;
+            margin-left: -94px;
+            @include mixin.pc {
+                top: 110px;
+            }
+        }
+        .p-main__blog-title::after {
+            content: "";
+            background-image: url(/images/ブログ.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 85px;
+            height: 100px;
+            top: 12px;
+            @include mixin.pc {
+                top: 35px;
+            }
+        }
+        .p-main__blog-box {
+            @include mixin.pc {
+                display: flex;
+                justify-content: space-between;
+            }
+            .p-main__blog-block {
+                width: 100%;
+                @include mixin.pc {
+                    width: 327px;
+                }
+                .p-main__blog-img {
+                    width: 100%;
+                }
+                .p-main__blog-block-title {
+                    text-align: left;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    letter-spacing: 0.1em;
+                    margin: 15px 0;
+                }
+                .p-main__blog-text {
+                    line-height: 28px;
+                    letter-spacing: 0.1em;
+                    text-align: left;
+                    margin-bottom: 55px;
+                }
+            }
+        }
+        .p-main__blog-view-more {
+            display: inline-block;
+            width: 80%;
+            color: #000000;
+            font-family: "Lato";
+            border: 1px solid #000000;
+            border-radius: 2px;
+            letter-spacing: 0.095em;
+            position: relative;
+            height: 38px;
+            font-size: 12px;
+            white-space: nowrap;
+            line-height: 38px;
+            text-align: left;
+            padding-left: 50px;
+            margin-bottom: 55px;
+            @include mixin.pc {
+                margin: 87px 0 98px;
+                padding: 18px 167px 18px 92px;
+                width: inherit;
+                height: inherit;
+                line-height: inherit;
+                font-size: inherit;
+                text-align: inherit;
+                padding-left: inherit;
+            }
+        }
+        .p-main__blog-view-more::after {
+            content: "";
+            position: absolute;
+            top: 18px;
+            width: 35px;
+            border-bottom: 1px solid #000000;
+            border-right: 1px solid #000000;
+            transform: skew(58deg);
+            margin-left: 28px;
+            font-size: 14px;
+            height: 3px;
+            @include mixin.pc {
+                top: 22px;
+                width: 44px;
+                height: 7px;
+                font-size: inherit;
+            }
+        }
+    }
+}
