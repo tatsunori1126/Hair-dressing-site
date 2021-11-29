@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.btn {
+    /* ボタンの配置位置  */
+    position: fixed;
+    top: 2px;
+    right: 0;
+    /* ボタンの大きさ  */
+    width: 55px;
+    height: 40px;
+    /* 最前面に */
+    z-index: 1000;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    @include mixin.pc {
+        display: none;
+    }
+}
+
+  /***** 真ん中のバーガー線 *****/
+.btn-line {
+	display: inline-block;
+	position: relative;  /* バーガー線の位置基準として設定 */
+	width: 100%;  /* 線の長さと高さ */
+	height: 2px;
+	background-color: #000000;  /* バーガー線の色 */
+	transition: .2s;
+}
+
+/****** 上下のバーガー線 *****/
+.btn-line::before,
+.btn-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  transition: .5s;
+}
+.btn-line::before {
+  /* 上の線の位置 */
+  transform: translateY(-12px);
+}
+.btn-line::after {
+  /* 下の線の位置 */
+  transform: translateY(12px);
+}
+
+/***** メニューオープン時 *****/
+.btn-line.open {
+	background-color: transparent;  	/* 真ん中の線を透明に */
+}
+.btn-line.open::before ,
+.btn-line.open::after {
+	content: "";
+	background-color: #000000;  /* 上下の線の色を変える */
+	transition: .2s;
+}
+.btn-line.open::before {
+	transform: rotate(45deg);  /* 上の線を傾ける */
+}
+.btn-line.open::after {
+	transform: rotate(-45deg);  /* 下の線を傾ける */
+}

@@ -2,6 +2,9 @@
 @use "../../foundation/mixin";
 .section-title {
     font-size: 20px;
+    @include mixin.tab {
+        font-size: 25px;
+    }
     @include mixin.pc {
         font-size: 30px;
     }

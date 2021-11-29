@@ -4,6 +4,12 @@
     width: 100%;
     height: 400px;
     padding-left: 30px;
+    @include mixin.tab {
+        padding-left: 50px;
+    }
+    @include mixin.sub {
+        padding-left: 110px;
+    }
     @include mixin.pc {
         height: 693px;
         padding-left: inherit;
@@ -16,6 +22,12 @@
         float: right;
         position: relative;
         z-index: 10;
+        @include mixin.tab {
+            height: 350px;
+        }
+        @include mixin.sub {
+            height: 500px;
+        }
         @include mixin.pc {
             height: 619px;
             width: 85%;
@@ -36,7 +48,8 @@
             align-items: center;
             border-radius: 50%;
             position: fixed;
-            top: 320px;
+            // top: 320px;
+            top: calc(100vh - 200px);
             right: 0;
             margin-right: 20px;
             @include mixin.pc {
@@ -59,7 +72,8 @@
             align-items: center;
             border-radius: 50%;
             position: fixed;
-            top: 390px;
+            // top: 390px;
+            top: calc(100vh - 130px);
             right: 0;
             margin-right: 20px;
             @include mixin.pc {
@@ -84,6 +98,12 @@
         font-weight: bold;
         letter-spacing: 0.46em;
         color: #735D42;
+        @include mixin.tab {
+            top: 380px;
+        }
+        @include mixin.sub {
+            top: 530px;
+        }
         @include mixin.pc {
             left: 107px;
             letter-spacing: 0.205em;
@@ -91,6 +111,7 @@
             font-size: 32px;
             font-weight: 500;
             margin-left: inherit;
+            top: 380px;
         }
     }
     &__top-visual {
@@ -108,6 +129,14 @@
             top: 50px;
             left: 0;
             z-index: 0;
+            @include mixin.tab {
+                height: 490px;
+                width: calc(100% - 50px);
+            }
+            @include mixin.sub {
+                height: 640px;
+                width: calc(100% - 110px);
+            }
             @include mixin.pc {
                 height: 693px;
                 width: 43%;

@@ -6,6 +6,12 @@
     position: relative;
     height: 1700px;
     margin-top: 56px;
+    @include mixin.tab {
+        height: 2000px;
+    }
+    @include mixin.sub {
+        height: 2300px;
+    }
     @include mixin.pc {
         margin-top: 80px;
         height: 734px;
@@ -15,10 +21,18 @@
         width: calc(100% - 30px);
         background: rgba(217,195,168,0.47);
         position: absolute;
-        top: 900px;
+        top: 932px;
         left: 0;
-        z-index: 10;
+        z-index: 0;
         height: 194px;
+        @include mixin.tab {
+            width: calc(100% - 50px);
+            top: 1100px;
+        }
+        @include mixin.sub {
+            width: calc(100% - 110px);
+            top: 1310px;
+        }
         @include mixin.pc {
             display: none;
         }
@@ -28,10 +42,16 @@
         width: 100%;
         background: rgba(217,195,168,0.47);
         position: absolute;
-        top: 543px;
+        top: 500px;
         left: 0;
         z-index: 10;
         height: 194px;
+        @include mixin.tab {
+            top: 600px;
+        }
+        @include mixin.sub {
+            top: 700px;
+        }
         @include mixin.pc {
             display: none;
         }
@@ -40,8 +60,15 @@
         padding: 0 30px;
         margin: 0 auto;
         text-align: center;
+        @include mixin.tab {
+            padding: 0 50px;
+        }
+        @include mixin.sub {
+            padding: 0 110px;
+        }
         @include mixin.pc {
             max-width: 1220px;
+            padding: inherit;
         }
         .p-main__staff-title {
             padding: 80px 0 60px;
@@ -54,9 +81,10 @@
             position: absolute;
             height: 35px;
             top: 98px;
-            width: 224px;
-            margin-left: -87px;
+            width: 180px;
+            margin-left: -55px;
             @include mixin.pc {
+                margin-left: -87px;
                 width: 270px;
                 top: 110px;
             }
@@ -65,15 +93,22 @@
             content: "";
             background-image: url(/images/スタッフ.png);
             background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
             position: absolute;
-            width: 85px;
-            height: 70px;
-            top: 53px;
+            width: 53px;
+            height: 60px;
+            top: 57px;
             margin-left: 7px;
+            @include mixin.pc {
+                width: 85px;
+                height: 70px;
+                top: 53px;
+            }
         }
         .p-main__staff-img-box {
             position: relative;
-            z-index: 20;
+            z-index: 5;
             @include mixin.pc {
                 display: flex;
                 justify-content: center;
@@ -91,8 +126,19 @@
                     width: 100%;
                     height: 304px;
                     object-fit: cover;
+                    @include mixin.tab {
+                        width: 90%;
+                        height: 400px;
+                    }
+                    @include mixin.sub {
+                        height: 500px;
+                        object-position: top;
+                    }
                     @include mixin.pc {
                         position: inherit;
+                        object-position: inherit;
+                        height: 304px;
+                        width: 100%;
                     }
                 }
                 .p-main__staff-name {
@@ -104,6 +150,9 @@
                     margin: 15px 0;
                     position: relative;
                     z-index: 50;
+                    @include mixin.tab {
+                        font-size: 15px;
+                    }
                     @include mixin.pc {
                         text-align: left;
                         font-size: inherit;
@@ -116,10 +165,17 @@
                     line-height: 21px;
                     position: relative;
                     z-index: 50;
+                    height: 45px;
+                    @include mixin.tab {
+                        text-align: center;
+                        font-size: 15px;
+                    }
                     @include mixin.pc {
                         line-height: 28px;
                         font-size: inherit;
                         position: inherit;
+                        height: inherit;
+                        text-align: left;
                     }
                 }
             }
@@ -179,10 +235,18 @@
     width: calc(100% - 30px);
     background: rgba(217, 195, 168, 0.47);
     position: absolute;
-    top: 410px;
+    top: 400px;
     left: 0;
-    z-index: 10;
+    z-index: 0;
     height: 194px;
+    @include mixin.tab {
+        width: calc(100% - 50px);
+        top: 480px;
+    }
+    @include mixin.sub {
+        width: calc(100% - 110px);
+        top: 580px;
+    }
     @include mixin.pc {
         width: calc(((100% - 1220px) / 2) + 1220px);
         height: 268px;

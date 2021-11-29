@@ -6,8 +6,15 @@
         padding: 0 30px;
         margin: 0 auto;
         text-align: center;
+        @include mixin.tab {
+            padding: 0 50px;
+        }
+        @include mixin.sub {
+            padding: 0 110px;
+        }
         @include mixin.pc {
             max-width: 1220px;
+            padding: inherit;
         }
         .p-main__style-title {
             margin: 60px 0 65px 0;
@@ -23,9 +30,10 @@
             position: absolute;
             height: 35px;
             top: 18px;
-            width: 208px;
-            margin-left: -86px;
+            width: 160px;
+            margin-left: -47px;
             @include mixin.pc {
+                margin-left: -86px;
                 width: 270px;
                 top: 33px;
             }
@@ -35,12 +43,15 @@
             background-image: url(/images/くし.png);
             background-repeat: no-repeat;
             position: absolute;
-            width: 85px;
-            height: 100px;
-            top: -68px;
-            margin-left: 10px;
+            background-size: contain;
+            background-position: center;
+            width: 75px;
+            height: 75px;
+            top: -37px;
             @include mixin.pc {
-                top: -58px;
+                width: 85px;
+                height: 100px;
+                top: -42px;
             }
         }
         .p-main__style-img-box {
@@ -57,6 +68,12 @@
                 object-fit: cover;
                 height: 165px;
                 margin: 0 auto;
+                @include mixin.tab {
+                    height: 305px;
+                }
+                @include mixin.sub {
+                    height: 400px;
+                }
                 @include mixin.pc {
                     width: 305px;
                     height: 305px;
@@ -85,15 +102,23 @@
                     height: 38px;
                     line-height: 38px;
                     text-align: left;
-                    padding-left: 10px;
+                    padding-left: 6%;
                     font-size: 12px;
+                    @include mixin.tab {
+                        height: 52px;
+                        line-height: 52px;
+                        width: 80%;
+                        padding-left: inherit;
+                        padding-right: 50px;
+                        text-align: center;
+                        font-size: 14px;
+                    }
                     @include mixin.pc {
                         padding: 18px 108px 18px 33px;
                         width: inherit;
                         height: inherit;
                         text-align: inherit;
                         line-height: inherit;
-                        padding-left: inherit;
                         font-size: inherit;
                     }
                 }
@@ -107,6 +132,9 @@
                     border-bottom: 1px solid #000000;
                     border-right: 1px solid #000000;
                     transform: skew(58deg);
+                    @include mixin.tab {
+                        top: 25px;
+                    }
                     @include mixin.pc {
                         top: 22px;
                         width: 44px;
@@ -131,19 +159,30 @@
                     height: 38px;
                     font-family: "Lato";
                     color: #000000;
-                    letter-spacing: 0.095em;
                     border: 1px solid #000000;
                     border-radius: 2px;
-                    display: flex;
-                    align-items: center;
+                    // display: flex;
+                    // align-items: center;
                     position: relative;
+                    line-height: 38px;
                     font-size: 12px;
+                    text-align: left;
+                    @include mixin.tab {
+                        height: 52px;
+                        line-height: 52px;
+                        width: 80%;
+                        text-align: left;
+                        padding-left: 22%;
+                        font-size: 14px;
+                    }
                     @include mixin.pc {
+                        letter-spacing: 0.095em;
                         padding: 14px 91px 14px 17px;
                         width: inherit;
                         height: inherit;
                         line-height: inherit;
                         font-size: inherit;
+                        text-align: inherit;
                     }
                     .fa-instagram {
                         content: "\f16d";
@@ -154,7 +193,7 @@
                         font-size: 16px;
                         margin-left: 10px;
                         margin-right: 5px;
-                        top: -1px;
+                        top: 1px;
                         @include mixin.pc {
                             font-size: 24px;
                             margin-right: 10px;
@@ -165,17 +204,21 @@
                 .p-main__style-instagram-btn::after {
                     content: "";
                     position: absolute;
-                    top: 14px;
-                    width: 28px;
-                    height: 7px;
+                    top: 17px;
+                    width: 25px;
+                    height: 4px;
                     border-bottom: 1px solid #000000;
                     border-right: 1px solid #000000;
                     transform: skew(58deg);
-                    margin-left: 107px;
+                    margin-left: 10px;
+                    @include mixin.tab {
+                        top: 25px;
+                    }
                     @include mixin.pc {
                         width: 44px;
-                        top: 22px;
-                        margin-left: 163px;
+                        top: 24px;
+                        margin-left: 20px;
+                        height: 7px;
                     }
                 }
             }

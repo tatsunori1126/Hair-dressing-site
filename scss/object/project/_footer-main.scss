@@ -12,14 +12,35 @@
         padding: 70px 30px;
         margin: 0 auto;
         text-align: center;
-        @include mixin.pc {
-            padding: 0 30px;
-            max-width: 1220px;
+        @include mixin.tab {
+            padding: 70px 50px;
+        }
+        @include mixin.sub {
+            padding: 70px 110px;
             display: flex;
             justify-content: space-between;
         }
+        @include mixin.pc {
+            padding: 0 0 83px;
+            max-width: 1220px;
+        }
         .p-footer__nav {
             text-align: left;
+            @include mixin.tab {
+                margin: 0 auto;
+                width: 50%;
+                padding-left: 8%;
+            }
+            @include mixin.sub {
+                width: inherit;
+                margin: 0;
+                padding-left: 0;
+            }
+            @include mixin.pc {
+                margin: 0;
+                width: inherit;
+                padding-left: inherit;
+            }
             &-box {
                 .p-footer__nav-list {
                     margin-bottom: 32px;
@@ -39,9 +60,21 @@
                 }
                 .p-footer__nav-list-right1 {
                     margin-right: 116px;
+                    @include mixin.sub {
+                        margin-right: 90px;
+                    }
+                    @include mixin.pc {
+                        margin-right: 116px;
+                    }
                 }
                 .p-footer__nav-list-right2 {
                     margin-right: 86px;
+                    @include mixin.sub {
+                        margin-right: 61px;
+                    }
+                    @include mixin.pc {
+                        margin-right: 86px;
+                    }
                 }
             }
             &-box-flex {
@@ -50,8 +83,19 @@
         }
         .p-footer__access {
             text-align: left;
+            @include mixin.tab {
+                margin-top: 90px;
+                text-align: center;
+            }
+            @include mixin.sub {
+                display: block;
+                margin-top: 0;
+                text-align: left;
+            }
             @include mixin.pc {
                 text-align: inherit;
+                display: block;
+                margin-top: 0;
             }
             .p-footer__open-box {
                 .p-footer__open-title {
@@ -61,6 +105,10 @@
                     font-weight: bold;
                     letter-spacing: 0.095em;
                     font-size: 15px;
+                    padding-top: 20px;
+                    @include mixin.sub {
+                        padding-top: inherit;
+                    }
                     @include mixin.pc {
                         font-size: 18px;
                         margin-bottom: 20px;
@@ -84,9 +132,16 @@
                     font-weight: bold;
                     letter-spacing: 0.095em;
                     font-size: 15px;
+                    @include mixin.tab {
+                        text-align: center;
+                    }
+                    @include mixin.sub {
+                        text-align: inherit;
+                    }
                     @include mixin.pc {
                         font-size: 18px;
                         margin-bottom: 20px;
+                        text-align: inherit;
                     }
                 }
                 .p-footer__access-text {
@@ -94,6 +149,12 @@
                     letter-spacing: 0.095em;
                     text-align: left;
                     font-size: 15px;
+                    @include mixin.tab {
+                        text-align: center;
+                    }
+                    @include mixin.sub {
+                        text-align: left;
+                    }
                     @include mixin.pc {
                         padding-left: 94px;
                         font-size: inherit;
@@ -110,6 +171,12 @@
                 text-align: left;
                 margin-top: 60px;
                 font-size: 15px;
+                @include mixin.tab {
+                    text-align: center;
+                }
+                @include mixin.sub {
+                    margin-top: inherit;
+                }
                 @include mixin.pc {
                     font-size: 18px;
                     text-align: inherit;
@@ -118,7 +185,7 @@
             }
             &-tell-box {
                 .p-footer__reserve-tell-number {
-                    text-align: left;
+                    text-align: center;
                     display: inline-block;
                     color: #000000;
                     font-weight: bold;
@@ -130,9 +197,20 @@
                     width: 100%;
                     margin: 20px 0 15px;
                     font-size: 14px;
+                    padding-right: 37px;
+                    @include mixin.tab {
+                        width: 60%;
+                        padding-left: 50px;
+                    }
+                    @include mixin.sub {
+                        width: 362px;
+                    }
                     @include mixin.pc {
                         width: 362px;
                         font-size: inherit;
+                        padding-right: inherit;
+                        padding-left: inherit;
+                        text-align: left;
                     }
                     .fa-phone-alt {
                         content: "\f879";
@@ -140,7 +218,7 @@
                         font-weight: 900;
                         color: #000000;
                         font-size: 16px;
-                        margin: 0 23px 0 50px;
+                        margin: 0 23px 0 0;
                         @include mixin.pc {
                             margin: 0 23px 0 76px;
                         }
@@ -149,7 +227,7 @@
             }
             &-mail-box {
                 .p-footer__reserve-mail-text {
-                    text-align: left;
+                    text-align: center;
                     display: inline-block;
                     color: #000000;
                     font-weight: bold;
@@ -160,9 +238,18 @@
                     line-height: 54px;
                     width: 100%;
                     font-size: 14px;
+                    @include mixin.tab {
+                        width: 60%;
+                        padding-left: 50px;
+                    }
+                    @include mixin.sub {
+                        width: 362px;
+                    }
                     @include mixin.pc {
                         width: 362px;
                         font-size: inherit;
+                        padding-left: inherit;
+                        text-align: left;
                     }
                     .fa-envelope {
                         content: "\f0e0";
@@ -170,7 +257,7 @@
                         font-weight: 900;
                         color: #000000;
                         font-size: 16px;
-                        margin: 0 23px 0 50px;
+                        margin: 0 23px 0 0;
                         @include mixin.pc {
                             margin: 0 23px 0 76px;
                         }

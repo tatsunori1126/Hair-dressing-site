@@ -6,8 +6,15 @@
         margin: 0 auto;
         text-align: center;
         padding: 0 30px;
+        @include mixin.tab {
+            padding: 0 50px;
+        }
+        @include mixin.sub {
+            padding: 0 110px;
+        }
         @include mixin.pc {
             max-width: 1220px;
+            padding: inherit;
         }
         .p-main__blog-title {
             padding: 60px 0 77px;
@@ -21,24 +28,30 @@
             background-image: url(/images/blog-border.png);
             background-repeat: no-repeat;
             position: absolute;
-            width: 270px;
+            width: 160px;
             height: 35px;
             top: 82px;
-            margin-left: -94px;
+            margin-left: -56px;
             @include mixin.pc {
+                margin-left: -94px;
                 top: 110px;
+                width: 270px;
             }
         }
         .p-main__blog-title::after {
             content: "";
             background-image: url(/images/ブログ.png);
             background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
             position: absolute;
-            width: 85px;
-            height: 100px;
-            top: 12px;
+            width: 70px;
+            height: 70px;
+            top: 38px;
             @include mixin.pc {
-                top: 35px;
+                width: 85px;
+                height: 100px;
+                top: 42px;
             }
         }
         .p-main__blog-box {
@@ -67,6 +80,13 @@
                     letter-spacing: 0.1em;
                     text-align: left;
                     margin-bottom: 55px;
+                    font-size: 13px;
+                    @include mixin.tab {
+                        font-size: 15px;
+                    }
+                    @include mixin.pc {
+                        font-size: inherit;
+                    }
                 }
             }
         }
@@ -79,28 +99,31 @@
             border-radius: 2px;
             letter-spacing: 0.095em;
             position: relative;
-            height: 38px;
-            font-size: 12px;
+            // height: 38px;
+            font-size: 14px;
             white-space: nowrap;
-            line-height: 38px;
-            text-align: left;
-            padding-left: 50px;
-            margin-bottom: 55px;
+            // line-height: 38px;
+            // text-align: left;
+            padding: 18px 80px 18px 50px;
+            margin: 10px 0 55px 0;
+            // padding-left: 50px;
+            // margin-bottom: 55px;
+            @include mixin.tab {
+                width: 50%;
+                padding: 18px 80px 18px 0;
+            }
             @include mixin.pc {
                 margin: 87px 0 98px;
                 padding: 18px 167px 18px 92px;
                 width: inherit;
-                height: inherit;
-                line-height: inherit;
                 font-size: inherit;
-                text-align: inherit;
-                padding-left: inherit;
+                // text-align: inherit;
             }
         }
         .p-main__blog-view-more::after {
             content: "";
             position: absolute;
-            top: 18px;
+            top: 24px;
             width: 35px;
             border-bottom: 1px solid #000000;
             border-right: 1px solid #000000;

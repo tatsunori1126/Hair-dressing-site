@@ -6,6 +6,12 @@
         padding: 0 30px;
         text-align: center;
         position: relative;
+        @include mixin.tab {
+            padding: 0 50px;
+        }
+        @include mixin.sub {
+            padding: 0 110px;
+        }
         @include mixin.pc {
             max-width: 1220px;
             margin: 0 auto;
@@ -14,6 +20,12 @@
         .p-main__concept-title {
             margin: 80px 0 50px 0;
             position: relative;
+            @include mixin.tab {
+                margin: 140px 0 50px 0;
+            }
+            @include mixin.sub {
+                margin: 290px 0 50px 0;
+            }
             @include mixin.pc {
                 margin: 80px 0 60px 0;
             }
@@ -23,11 +35,12 @@
             background-image: url(/images/concept-border.png);
             background-repeat: no-repeat;
             position: absolute;
-            width: 220px;
+            width: 180px;
             height: 35px;
             top: 20px;
-            margin-left: -58px;
+            margin-left: -35px;
             @include mixin.pc {
+                margin-left: -58px;
                 top: 30px;
                 width: 270px;
             }
@@ -36,12 +49,16 @@
             content: "";
             background-image: url(/images/1587505\ 2.png);
             background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
             position: absolute;
-            width: 85px;
-            height: 100px;
-            top: -58px;
+            width: 70px;
+            height: 70px;
+            top: -31px;
             @include mixin.pc {
                 top: -44px;
+                width: 85px;
+                height: 100px;
             }
         }
         .p-main__concept-box {
@@ -53,6 +70,12 @@
                 height: 275px;
                 padding-top: 83px;
                 object-fit: cover;
+                @include mixin.tab {
+                    height: 350px;
+                }
+                @include mixin.sub {
+                    height: 450px;
+                }
                 @include mixin.pc {
                     display: flex;
                     justify-content: left;
@@ -71,6 +94,12 @@
                 position: relative;
                 display: inline-block;
                 bottom: 282px;
+                @include mixin.tab {
+                    top: -355px;
+                }
+                @include mixin.sub {
+                    top: -455px;
+                }
                 @include mixin.pc {
                     font-size: 20px;
                     text-align: inherit;
@@ -116,6 +145,9 @@
                     padding: 50px 30px 20px;
                     font-size: 12px;
                     top: -12px;
+                    @include mixin.tab {
+                        font-size: 14px;
+                    }
                     @include mixin.pc {
                         width: 578px;
                         height: 314px;
@@ -132,17 +164,21 @@
                     border-radius: 2px;
                     border: 1px solid #000000;
                     letter-spacing: 0.095em;
-                    padding: 18px 80px 18px 52px;
+                    padding: 18px 80px 18px 50px;
                     font-family: "Lato";
                     font-style: normal;
                     font-size: 14px;
                     white-space: nowrap;
                     width: 80%;
                     margin-bottom: 50px;
-                    text-align: left;
+                    text-align: center;
                     // top: 250px;
                     // left: 0;
                     // margin-left: 40px;
+                    @include mixin.tab {
+                        width: 50%;
+                        padding: 18px 80px 18px 20px;
+                    }
                     @include mixin.pc {
                         display: none;
                     }
