@@ -198,6 +198,7 @@
                     margin: 20px 0 15px;
                     font-size: 14px;
                     padding-right: 37px;
+                    transition: all 0.2s;
                     @include mixin.tab {
                         width: 60%;
                         padding-left: 50px;
@@ -223,6 +224,14 @@
                             margin: 0 23px 0 76px;
                         }
                     }
+                    .fa-phone-alt:hover {
+                        color: #FEFEFE;
+                    }
+                }
+                .p-footer__reserve-tell-number:hover {
+                    background-color: #D5BDA0;
+                    color: #FEFEFE;
+                    border: none;
                 }
             }
             &-mail-box {
@@ -238,6 +247,7 @@
                     line-height: 54px;
                     width: 100%;
                     font-size: 14px;
+                    transition: all 0.2s;
                     @include mixin.tab {
                         width: 60%;
                         padding-left: 50px;
@@ -262,6 +272,14 @@
                             margin: 0 23px 0 76px;
                         }
                     }
+                    .fa-envelope:hover {
+                        color: #FEFEFE;
+                    }
+                }
+                .p-footer__reserve-mail-text:hover {
+                    background-color: #D5BDA0;
+                    color: #FEFEFE;
+                    border: none;
                 }
             }
         }

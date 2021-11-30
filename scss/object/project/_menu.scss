@@ -96,7 +96,8 @@
                     margin-bottom: inherit;
                 }
                 .p-main__menu-img {
-                    width: 75%;
+                    width: 100%;
+                    // width: 75%;
                     height: 156px;
                     object-fit: cover;
                     @include mixin.tab {
@@ -128,6 +129,9 @@
                     @include mixin.pc {    
                         margin-top: 40px;
                     }
+                }
+                .p-main__menu-sub-box1 {
+                    margin-top: 30px;
                 }
                 .p-main__menu-sub-box2, .p-main__menu-sub-box4 {
                     left: 0;
@@ -204,6 +208,7 @@
             font-size: 14px;
             white-space: nowrap;
             width: 80%;
+            transition: all 0.2s;
             @include mixin.tab {
                 width: 50%;
             }
@@ -213,6 +218,11 @@
                 padding: 18px 167px 18px 92px;
                 margin: 110px 0 100px 0;
             }
+        }
+        .p-main__menu-view-more:hover {
+            background-color: #D5BDA0;
+            color: #FEFEFE;
+            border: none;
         }
         .p-main__menu-view-more::after {
             content: "";
@@ -229,5 +239,38 @@
                 height: 7px;
             }
         }
+        .p-main__menu-view-more:hover::after {
+            border-bottom: 1px solid #FEFEFE;
+            border-right: 1px solid #FEFEFE;
+        }
+    }
+}
+
+.menu-mask {
+    position: relative;
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+    width: 75%;
+    @include mixin.pc {
+        width: inherit;
+    }
+}
+.menu-mask::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -75%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    transform: skewX(-25deg);
+}
+.menu-mask:hover::before {
+    animation: p-main__menu-img-block 0.8s;
+}
+@keyframes p-main__menu-img-block {
+    100% {
+        left: 125%;
     }
 }

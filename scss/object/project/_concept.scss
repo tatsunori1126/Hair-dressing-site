@@ -172,6 +172,7 @@
                     width: 80%;
                     margin-bottom: 50px;
                     text-align: center;
+                    transition: all 0.2s;
                     // top: 250px;
                     // left: 0;
                     // margin-left: 40px;
@@ -182,6 +183,11 @@
                     @include mixin.pc {
                         display: none;
                     }
+                }
+                .p-main__concept-view-more:hover {
+                    background-color: #D5BDA0;
+                    color: #FEFEFE;
+                    border: none;
                 }
                 .p-main__concept-view-more::after {
                     content: "";
@@ -195,7 +201,36 @@
                     margin-left: 30px;
                     margin-top: 5px;
                 }
+                .p-main__concept-view-more:hover::after {
+                    border-bottom: 1px solid #FEFEFE;
+                    border-right: 1px solid #FEFEFE;
+                }
             }
         }
+    }
+}
+
+.concept-mask {
+    position: relative;
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+}
+.concept-mask::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -75%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    transform: skewX(-25deg);
+}
+.concept-mask:hover::before {
+    animation: p-main__concept-box 0.8s;
+}
+@keyframes p-main__concept-box {
+    100% {
+        left: 125%;
     }
 }
