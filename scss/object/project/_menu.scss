@@ -69,11 +69,15 @@
                 }
             }
             .p-main__menu-img-block2 {
-                display: flex;
-                justify-content: right;
+                // display: flex;
+                // justify-content: right;
+                margin-left: auto;
+                text-align: right;
                 @include mixin.pc {
                     display: inherit;
                     margin-top: 120px;
+                    margin-left: inherit;
+                    text-align: inherit;
                 }
             }
             .p-main__menu-img-block3 {
@@ -82,18 +86,24 @@
                 }
             }
             .p-main__menu-img-block4 {
-                display: flex;
-                justify-content: right;
+                // display: flex;
+                // justify-content: right;
+                margin-left: auto;
+                text-align: right;
                 @include mixin.pc {
                     display: inherit;
                     margin-top: 140px;
+                    margin-left: inherit;
+                    text-align: inherit;
                 }
             }
             .p-main__menu-img-block {
                 margin-bottom: 90px;
                 position: relative;
+                width: 100%;
                 @include mixin.pc {
                     margin-bottom: inherit;
+                    width: 548px;
                 }
                 .p-main__menu-img {
                     width: 100%;
@@ -131,7 +141,9 @@
                     }
                 }
                 .p-main__menu-sub-box1 {
-                    margin-top: 30px;
+                    @include mixin.pc {
+                        margin-top: 30px;
+                    }
                 }
                 .p-main__menu-sub-box2, .p-main__menu-sub-box4 {
                     left: 0;
@@ -273,4 +285,29 @@
     100% {
         left: 125%;
     }
+}
+
+.menu-mask-right {
+    position: relative;
+    display: inline-block;
+    line-height: 0;
+    overflow: hidden;
+    width: 75%;
+    text-align: right;
+    @include mixin.pc {
+        width: inherit;
+    }
+}
+.menu-mask-right::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -75%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    transform: skewX(-25deg);
+}
+.menu-mask-right:hover::before {
+    animation: p-main__menu-img-block 0.8s;
 }

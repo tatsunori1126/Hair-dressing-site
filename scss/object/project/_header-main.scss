@@ -54,13 +54,23 @@
                 a {
                     height: 100%;
                     color: #000000;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    display: block;
+                    margin: 0 auto;
+                    width: 20%;
+                    text-align: center;
+                    transition: 0.2s;
+                    // justify-content: center;
+                    // align-items: center;
                     @include mixin.pc {
+                        display: flex;
+                        align-items: center;
                         justify-content: inherit;
+                        width: inherit;
                     }
                 }
+            }
+            .hover a:hover {
+                color: #D5BDA0;
             }
             .p-header__nav-reserve {
                 background-color: #D5BDA0;
@@ -68,11 +78,18 @@
                 padding: 8px 20px;
                 margin: 0 auto;
                 width: 40%;
+                transition: 0.2s;
                 @include mixin.pc {
                     padding: 0 38px;
                     width: 153px;
                     margin: 0 0 0 45px;
                 }
+                .reserve-a {
+                    width: 100%;
+                }
+            }
+            .p-header__nav-reserve:hover {
+                opacity: 0.6;
             }
         }
     }

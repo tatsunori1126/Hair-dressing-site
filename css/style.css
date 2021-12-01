@@ -199,14 +199,22 @@ body {
 .p-header__nav-box .p-header__nav-list a {
   height: 100%;
   color: #000000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  margin: 0 auto;
+  width: 20%;
+  text-align: center;
+  transition: 0.2s;
 }
 @media (min-width: 1440px) {
   .p-header__nav-box .p-header__nav-list a {
+    display: flex;
+    align-items: center;
     justify-content: inherit;
+    width: inherit;
   }
+}
+.p-header__nav-box .hover a:hover {
+  color: #D5BDA0;
 }
 .p-header__nav-box .p-header__nav-reserve {
   background-color: #D5BDA0;
@@ -214,6 +222,7 @@ body {
   padding: 8px 20px;
   margin: 0 auto;
   width: 40%;
+  transition: 0.2s;
 }
 @media (min-width: 1440px) {
   .p-header__nav-box .p-header__nav-reserve {
@@ -221,6 +230,12 @@ body {
     width: 153px;
     margin: 0 0 0 45px;
   }
+}
+.p-header__nav-box .p-header__nav-reserve .reserve-a {
+  width: 100%;
+}
+.p-header__nav-box .p-header__nav-reserve:hover {
+  opacity: 0.6;
 }
 
 .panelactive {
@@ -402,6 +417,28 @@ body {
   }
 }
 
+.p-main__top-visual-title span {
+  opacity: 0;
+}
+
+.p-main__top-visual-title.glow span {
+  animation: glow_anime_on 1s ease-out forwards;
+}
+
+@keyframes glow_anime_on {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 0 #FFF, 0 0 0 #FFF;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 10px #FFF, 0 0 15px #FFF;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 0 #FFF, 0 0 0 #FFF;
+  }
+}
 .p-main__concept {
   width: 100%;
 }
@@ -759,13 +796,15 @@ body {
   }
 }
 .p-main__menu-sub .p-main__menu-img-box .p-main__menu-img-block2 {
-  display: flex;
-  justify-content: right;
+  margin-left: auto;
+  text-align: right;
 }
 @media (min-width: 1440px) {
   .p-main__menu-sub .p-main__menu-img-box .p-main__menu-img-block2 {
     display: inherit;
     margin-top: 120px;
+    margin-left: inherit;
+    text-align: inherit;
   }
 }
 @media (min-width: 1440px) {
@@ -774,22 +813,26 @@ body {
   }
 }
 .p-main__menu-sub .p-main__menu-img-box .p-main__menu-img-block4 {
-  display: flex;
-  justify-content: right;
+  margin-left: auto;
+  text-align: right;
 }
 @media (min-width: 1440px) {
   .p-main__menu-sub .p-main__menu-img-box .p-main__menu-img-block4 {
     display: inherit;
     margin-top: 140px;
+    margin-left: inherit;
+    text-align: inherit;
   }
 }
 .p-main__menu-sub .p-main__menu-img-box .p-main__menu-img-block {
   margin-bottom: 90px;
   position: relative;
+  width: 100%;
 }
 @media (min-width: 1440px) {
   .p-main__menu-sub .p-main__menu-img-box .p-main__menu-img-block {
     margin-bottom: inherit;
+    width: 548px;
   }
 }
 .p-main__menu-sub .p-main__menu-img-box .p-main__menu-img-block .p-main__menu-img {
@@ -836,8 +879,10 @@ body {
     margin-top: 40px;
   }
 }
-.p-main__menu-sub .p-main__menu-img-box .p-main__menu-img-block .p-main__menu-sub-box1 {
-  margin-top: 30px;
+@media (min-width: 1440px) {
+  .p-main__menu-sub .p-main__menu-img-box .p-main__menu-img-block .p-main__menu-sub-box1 {
+    margin-top: 30px;
+  }
 }
 .p-main__menu-sub .p-main__menu-img-box .p-main__menu-img-block .p-main__menu-sub-box2, .p-main__menu-sub .p-main__menu-img-box .p-main__menu-img-block .p-main__menu-sub-box4 {
   left: 0;
@@ -1001,6 +1046,35 @@ body {
     left: 125%;
   }
 }
+.menu-mask-right {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  overflow: hidden;
+  width: 75%;
+  text-align: right;
+}
+@media (min-width: 1440px) {
+  .menu-mask-right {
+    width: inherit;
+  }
+}
+
+.menu-mask-right::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: -75%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  transform: skewX(-25deg);
+}
+
+.menu-mask-right:hover::before {
+  animation: p-main__menu-img-block 0.8s;
+}
+
 .p-main__style {
   width: 100%;
 }
@@ -1906,11 +1980,15 @@ body {
   font-weight: 300;
   letter-spacing: 0.095em;
   font-size: 15px;
+  transition: 0.2s;
 }
 @media (min-width: 1440px) {
   .p-footer__sub .p-footer__nav-box .p-footer__nav-list a {
     font-size: inherit;
   }
+}
+.p-footer__sub .p-footer__nav-box .p-footer__nav-list a:hover {
+  color: #D5BDA0;
 }
 .p-footer__sub .p-footer__nav-box .p-footer__nav-list-right1 {
   margin-right: 116px;
@@ -2104,21 +2182,17 @@ body {
     text-align: left;
   }
 }
-.p-footer__sub .p-footer__reserve-tell-box .p-footer__reserve-tell-number .fa-phone-alt {
+.p-footer__sub .p-footer__reserve-tell-box .p-footer__reserve-tell-number::before {
   content: "\f879";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  color: #000000;
   font-size: 16px;
   margin: 0 23px 0 0;
 }
 @media (min-width: 1440px) {
-  .p-footer__sub .p-footer__reserve-tell-box .p-footer__reserve-tell-number .fa-phone-alt {
+  .p-footer__sub .p-footer__reserve-tell-box .p-footer__reserve-tell-number::before {
     margin: 0 23px 0 76px;
   }
-}
-.p-footer__sub .p-footer__reserve-tell-box .p-footer__reserve-tell-number .fa-phone-alt:hover {
-  color: #FEFEFE;
 }
 .p-footer__sub .p-footer__reserve-tell-box .p-footer__reserve-tell-number:hover {
   background-color: #D5BDA0;
@@ -2158,21 +2232,17 @@ body {
     text-align: left;
   }
 }
-.p-footer__sub .p-footer__reserve-mail-box .p-footer__reserve-mail-text .fa-envelope {
+.p-footer__sub .p-footer__reserve-mail-box .p-footer__reserve-mail-text::before {
   content: "\f0e0";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  color: #000000;
   font-size: 16px;
   margin: 0 23px 0 0;
 }
 @media (min-width: 1440px) {
-  .p-footer__sub .p-footer__reserve-mail-box .p-footer__reserve-mail-text .fa-envelope {
+  .p-footer__sub .p-footer__reserve-mail-box .p-footer__reserve-mail-text::before {
     margin: 0 23px 0 76px;
   }
-}
-.p-footer__sub .p-footer__reserve-mail-box .p-footer__reserve-mail-text .fa-envelope:hover {
-  color: #FEFEFE;
 }
 .p-footer__sub .p-footer__reserve-mail-box .p-footer__reserve-mail-text:hover {
   background-color: #D5BDA0;
@@ -2293,6 +2363,26 @@ body {
   }
 }
 
+.js-blur {
+  opacity: 0;
+}
+
+.blur {
+  animation-name: blurAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes blurAnime {
+  from {
+    filter: blur(10px);
+    transform: scale(1.02);
+  }
+  to {
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
 /* ==========================================================================
    Foundation
    ========================================================================== */

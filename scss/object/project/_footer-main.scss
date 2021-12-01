@@ -53,9 +53,13 @@
                         font-weight: 300;
                         letter-spacing: 0.095em;
                         font-size: 15px;
+                        transition: 0.2s;
                         @include mixin.pc {
                             font-size: inherit;
                         }
+                    }
+                    a:hover {
+                        color: #D5BDA0;
                     }
                 }
                 .p-footer__nav-list-right1 {
@@ -213,19 +217,15 @@
                         padding-left: inherit;
                         text-align: left;
                     }
-                    .fa-phone-alt {
-                        content: "\f879";
-                        font-family: "Font Awesome 5 Free";
-                        font-weight: 900;
-                        color: #000000;
-                        font-size: 16px;
-                        margin: 0 23px 0 0;
-                        @include mixin.pc {
-                            margin: 0 23px 0 76px;
-                        }
-                    }
-                    .fa-phone-alt:hover {
-                        color: #FEFEFE;
+                }
+                .p-footer__reserve-tell-number::before {
+                    content: "\f879";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    font-size: 16px;
+                    margin: 0 23px 0 0;
+                    @include mixin.pc {
+                        margin: 0 23px 0 76px;
                     }
                 }
                 .p-footer__reserve-tell-number:hover {
@@ -261,19 +261,15 @@
                         padding-left: inherit;
                         text-align: left;
                     }
-                    .fa-envelope {
-                        content: "\f0e0";
-                        font-family: "Font Awesome 5 Free";
-                        font-weight: 900;
-                        color: #000000;
-                        font-size: 16px;
-                        margin: 0 23px 0 0;
-                        @include mixin.pc {
-                            margin: 0 23px 0 76px;
-                        }
-                    }
-                    .fa-envelope:hover {
-                        color: #FEFEFE;
+                }
+                .p-footer__reserve-mail-text::before {
+                    content: "\f0e0";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    font-size: 16px;
+                    margin: 0 23px 0 0;
+                    @include mixin.pc {
+                        margin: 0 23px 0 76px;
                     }
                 }
                 .p-footer__reserve-mail-text:hover {
