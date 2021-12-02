@@ -14,26 +14,28 @@
         height: 693px;
         padding-left: inherit;
     }
-    &__top-visual-bg-img {
-        background-image: url("/images/ファーストビュー写真.png");
-        background-size: cover;
-        height: 263px;
-        width: 100%;
-        float: right;
-        position: relative;
-        z-index: 10;
-        @include mixin.tab {
-            height: 350px;
-        }
-        @include mixin.sub {
-            height: 500px;
-        }
-        @include mixin.pc {
-            height: 619px;
-            width: 85%;
-        }
+    // &__top-visual-bg-img {
+    //     // background-image: url("/images/ファーストビュー写真.png");
+    //     // background-size: cover;
+    //     height: 263px;
+    //     width: 100%;
+    //     float: right;
+    //     position: relative;
+    //     z-index: 10;
+    //     @include mixin.tab {
+    //         height: 350px;
+    //     }
+    //     @include mixin.sub {
+    //         height: 500px;
+    //     }
+    //     @include mixin.pc {
+    //         height: 619px;
+    //         width: 85%;
+    //     }
         .fab {
             font-family: "Font Awesome 5 Brands";
+            z-index: 1000;
+            margin-left: 200px;
         }
         .fa-instagram {
             content: "\f16d";
@@ -56,7 +58,7 @@
                 top: 461px;
                 left: 1077px;
                 margin-right: inherit;
-                position: absolute;
+                // position: absolute;
             }
         }
         .fa-twitter {
@@ -80,14 +82,14 @@
                 top: 532px;
                 left: 1077px;
                 margin-right: inherit;
-                position: absolute;
+                // position: absolute;
             }
         }
-    }
+    // }
     &__top-visual-title {
         position: relative;
         white-space: nowrap;
-        top: 290px;
+        top: 310px;
         left: 0;
         margin-left: 8px;
         width: 20%;
@@ -99,10 +101,10 @@
         letter-spacing: 0.46em;
         color: #735D42;
         @include mixin.tab {
-            top: 380px;
+            top: 400px;
         }
         @include mixin.sub {
-            top: 530px;
+            top: 550px;
         }
         @include mixin.pc {
             left: 107px;
@@ -111,7 +113,8 @@
             font-size: 32px;
             font-weight: 500;
             margin-left: inherit;
-            top: 380px;
+            // top: 380px;
+            top: 300px;
         }
     }
     &__top-visual {

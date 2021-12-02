@@ -1,0 +1,142 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.swiper {
+    height: 263px;
+    width: 100%;
+    float: right;
+    @include mixin.tab {
+        height: 350px;
+    }
+    @include mixin.sub {
+        height: 500px;
+    }
+    @include mixin.pc {
+        height: 619px;
+        width: 85%;
+    }
+    .swiper-wrapper {
+        .swiper-slide {
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+.p-main__top-visual-bg-color {
+    .swiper-button-prev {
+        background-image: none;
+        width: 80px;
+        height: 50px;
+        display: inline-block;
+        top: 285px;
+        left: 5px;
+        @include mixin.tab {
+            top: 374px;
+            left: 25px;
+        }
+        @include mixin.sub {
+            top: 525px;
+            left: auto;
+            right: 0;
+            margin-right: 610px;
+        }
+        @include mixin.pc {
+            margin-right: 215px;
+            top: 660px;
+        }
+    }
+    
+    .swiper-button-prev:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 17px;
+        height: 5px;
+        width: 35px;
+        border-bottom: 1px solid #222222;
+        border-left: 1px solid #222222;
+        transform: skew(-58deg);
+        margin-left: 30px;
+        @include mixin.pc {
+            width: 30px;
+            height: 8px;
+        }
+    }
+    .swiper-button-prev::after {
+        display: none;
+    }
+    
+    .swiper-button-next {
+        background-image: none;
+        width: 80px;
+        height: 50px;
+        display: inherit;
+        right: 0;
+        margin-right: 20px;
+        top: 285px;
+        @include mixin.tab {
+            top: 374px;
+        }
+        @include mixin.sub {
+            top: 525px;
+            margin-right: 460px;
+        }
+        @include mixin.pc {
+            top: 660px;
+            right: 30px;
+            margin-right: 20px;
+        }
+    }
+    
+    .swiper-button-next:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 17px;
+        height: 5px;
+        width: 35px;
+        border-bottom: 1px solid #222222;
+        border-right: 1px solid #222222;
+        transform: skew(58deg);
+        margin-left: 30px;
+        @include mixin.pc {
+            width: 30px;
+            height: 8px;
+        }
+    }
+    
+    .swiper-button-next:after {
+        display: none;
+    }
+    
+    .swiper-pagination {
+        bottom: 110px;
+        display: inline-block;
+        text-align: center;
+        color: #222222;
+        font-family: "Lato";
+        z-index: 0;
+        @include mixin.sub {
+            text-align: right;
+            padding-right: 550px;
+        }
+        @include mixin.pc {
+            padding-right: 150px;
+            bottom: 27px;
+        }
+    }
+    
+    .p-main__top-view-more {
+        display: none;
+        @include mixin.pc {
+            position: absolute;
+            bottom: 27px;
+            padding-left: 107px;
+            color: #222222;
+            font-family: "Lato";
+            display: block;
+        }
+    }
+}

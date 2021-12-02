@@ -7,8 +7,10 @@
     <title>架空美容院サイト</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.css" integrity="sha512-UeEUffyTLOC2PrE2r82gwdSH2j7T/rsrfR/+px3YGJbib2RfLGOCYX4gSiMZhYxGOyw5gf3SqTzuaTlxs6E4Ug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.js" integrity="sha512-v+pIzqEVf0+O50Ls9scw6DDZT5On6G5wnXLLMSjYlfJJrNe+ZCWK849PBUYQDagZKc2125WKYJY3XugLNwwPfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -32,14 +34,30 @@
     </header>
     <main class="l-main">
         <div class="p-main">
-            <div class="p-main__top-visual-bg-img">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./images/ファーストビュー写真.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./images/スワイパー画像１.jpeg" alt=""></div>
+                    <div class="swiper-slide"><img src="./images/スワイパー画像２.jpeg" alt=""></div>
+                    <!-- <div class="p-main__top-visual-bg-img"> -->
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+            </div>
+            <div class="font-awesome">
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
             <h1 class="p-main__top-visual-title">髪、よろこぶ。</h1>
             <p class="p-main__top-visual-title">心、うるおう。</p>
             <div class="p-main__top-visual">
-                <div class="p-main__top-visual-bg-color"></div>
+                <div class="p-main__top-visual-bg-color">
+                    <p class="p-main__top-view-more">VIEW MORE</p>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </div>
         <article>
