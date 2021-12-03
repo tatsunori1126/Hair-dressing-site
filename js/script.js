@@ -69,4 +69,7 @@ var swiper = new Swiper('.swiper', {
         clickable: true,
         type:'fraction',
     },
-  });
+    autoplay: {
+        delay: 3000,
+    },
+});
