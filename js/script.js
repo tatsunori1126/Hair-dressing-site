@@ -59,6 +59,8 @@ $(window).scroll(function () {
 });
 
 var swiper = new Swiper('.swiper', {
+    speed: 1400,
+    effect: 'fade',
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
